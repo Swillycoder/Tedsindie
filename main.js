@@ -41,7 +41,7 @@ class ImageData {
       ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
     }
   }
-}
+
   isHovered(mouseX, mouseY) {
       return (
           mouseX >= this.x &&
