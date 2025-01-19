@@ -215,9 +215,9 @@ class Home extends Section {
 class Games extends Section {
   constructor() {
     super("Games", "Explore my games!", [
-      new ImageData("images/game1.png", -300, 150, 200, 150, "https://swillycoder.github.io/Jungle-Runner/"),
-      new ImageData("images/game2.png", 0, 150, 200, 150, "https://swillycoder.github.io/Rottentomatos/"),
-      new ImageData("images/game3.png", 300, 150, 200, 150, "https://swillycoder.github.io/SeahorseWorld/"),
+      new ImageData("./game1.png", -300, 150, 200, 150, "https://swillycoder.github.io/Jungle-Runner/"),
+      new ImageData("./game2.png", 0, 150, 200, 150, "https://swillycoder.github.io/Rottentomatos/"),
+      new ImageData("./game3.png", 300, 150, 200, 150, "https://swillycoder.github.io/SeahorseWorld/"),
     ]);
   }
 
