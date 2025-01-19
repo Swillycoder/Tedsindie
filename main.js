@@ -12,29 +12,34 @@ forest_img.src = 'https://raw.githubusercontent.com/Swillycoder/Tedsindie/forest
 
 class ImageData {
   constructor(src, xOffset, y, width, height, link = null) {
-      this.src = src;
-      this.xOffset = xOffset
-      this.y = y;
-      this.width = width;
-      this.height = height;
-      this.link = link;
-      this.image = new Image();
-      this.image.src = src;
-      this.loaded = false;
+    this.src = src;
+    this.xOffset = xOffset;
+    this.y = y;
+    this.width = width;
+    this.height = height;
+    this.link = link;
+    this.image = new Image();
+    this.image.src = src;
+    this.loaded = false;
 
-      this.image.onload = () => {
-        this.loaded = true
-        this.width = this.width || this.image.width;
-        this.height = this.height || this.image.height;
-        this.x = canvas.width / 2 - this.width / 2 + this.xOffset;
-        
-        drawActiveSection();
+    this.image.onload = () => {
+      this.loaded = true;
+      this.width = this.width || this.image.width;
+      this.height = this.height || this.image.height;
+      this.x = canvas.width / 2 - this.width / 2 + this.xOffset;
+      
+      drawActiveSection();
+    };
+
+    this.image.onerror = () => {
+      console.error(`Failed to load image: ${this.src}`);
     };
   }
 
   draw(ctx) {
     if (this.loaded) {
       ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+    }
   }
 }
   isHovered(mouseX, mouseY) {
