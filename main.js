@@ -393,7 +393,8 @@ class Leaf {
       this.y,
       this.width,
       this.height
-    );
+      );
+    }
   }
 }
 
