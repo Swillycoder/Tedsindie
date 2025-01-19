@@ -377,6 +377,7 @@ class Leaf {
   }
 
   draw(ctx) {
+    anim_img.onload = () => {
     ctx.drawImage(
       anim_img,
       this.frames * this.width,
@@ -388,6 +389,7 @@ class Leaf {
       this.width,
       this.height
     );
+    }
   }
 }
 
