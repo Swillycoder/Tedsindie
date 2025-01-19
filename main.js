@@ -398,14 +398,6 @@ class Leaf {
   }
 }
 
-const sections = [
-  new Home(),
-  new Games(),
-  new Bio(),
-  new Contact(),
-  new Donate(),
-];
-
 async function renderSections(ctx, canvas) {
   for (const section of sections) {
     section.draw(ctx, canvas); // Draw each section
@@ -426,6 +418,14 @@ function preloadImages(imageDataArray) {
   }
   return Promise.all(promises);
 }
+
+const sections = [
+    new Home(),
+    new Games(),
+    new Bio(),
+    new Contact(),
+    new Donate(),
+  ];
 
 // Collect all images from sections
 const allImages = sections.flatMap(section => section.images);
