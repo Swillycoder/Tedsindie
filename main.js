@@ -6,9 +6,9 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const anim_img = new Image();
-anim_img.src = 'http://localhost:8000/images/leaf_anim.png'
+anim_img.src = 'https://raw.githubusercontent.com/Swillycoder/Tedsindie/leaf_anim.png'
 const forest_img = new Image();
-forest_img.src = 'http://localhost:8000/images/forest1.png'
+forest_img.src = 'https://raw.githubusercontent.com/Swillycoder/Tedsindie/forest1.png'
 
 class ImageData {
   constructor(src, xOffset, y, width, height, link = null) {
@@ -184,7 +184,7 @@ class Section {
 class Home extends Section {
   constructor() {
     super("Home", "Welcome to Teds Indie Games", [
-      new ImageData("images/home1.png", 0, 140, 550, 400),
+      new ImageData("https://raw.githubusercontent.com/Swillycoder/Tedsindie/home1.png", 0, 140, 550, 400),
     ]);
     const homeText = new MultiLineText({
       fileName: "./text1.txt",
