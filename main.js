@@ -407,6 +407,34 @@ async function renderSections(ctx, canvas) {
   }
 }
 
+function preloadImages(imageDataArray) {
+  const promises = [];
+  for (const imageData of imageDataArray) {
+      promises.push(
+          new Promise((resolve, reject) => {
+              const img = new Image();
+              img.src = imageData.src;
+              img.onload = () => resolve();
+              img.onerror = () => reject(`Failed to load image: ${imageData.src}`);
+          })
+      );
+  }
+  return Promise.all(promises);
+}
+
+// Collect all images from sections
+const allImages = sections.flatMap(section => section.images);
+
+// Preload the images
+preloadImages(allImages)
+  .then(() => {
+      console.log("All images loaded successfully.");
+      drawActiveSection();
+  })
+  .catch(error => {
+      console.error(error);
+  });
+
 let activeSectionIndex = 0;
 const leaves = []  
 
