@@ -184,7 +184,7 @@ class Section {
 class Home extends Section {
   constructor() {
     super("Home", "Welcome to Teds Indie Games", [
-      new ImageData("https://raw.githubusercontent.com/Swillycoder/Tedsindie/home1.png", 0, 140, 550, 400),
+      new ImageData("./home1.png", 0, 140, 550, 400),
     ]);
     const homeText = new MultiLineText({
       fileName: "./text1.txt",
@@ -234,7 +234,7 @@ class Games extends Section {
 class Bio extends Section {
   constructor() {
     super("Bio", "Learn more about me!", [
-      new ImageData("images/bio1.png", 0, 120, 400, 400),
+      new ImageData("./bio1.png", 0, 120, 400, 400),
     ]);
     const bioText = new MultiLineText({
       fileName: "./bio.txt",
@@ -260,7 +260,7 @@ class Bio extends Section {
 class Contact extends Section {
   constructor() {
     super("Contact", "Get in touch with me!", [
-      new ImageData("images/contact1.png", 0, 150, 600, 400),
+      new ImageData("./contact1.png", 0, 150, 600, 400),
     ]);
   }
 
@@ -274,20 +274,20 @@ class Contact extends Section {
 class Donate extends Section {
   constructor() {
     super("Donate", "Support my work!", [
-      new ImageData("images/links1.png", -200, 150, 200, 200),
-      new ImageData("images/metamask.png", 200, 150, 200, 200),
+      new ImageData("./links1.png", -200, 150, 200, 200),
+      new ImageData("./metamask.png", 200, 150, 200, 200),
 
-      new ImageData("images/arena.png", -500, 150, 100, 100),
-      new ImageData("images/avax.png", -500, 250, 100, 100),
-      new ImageData("images/coq.png", -500, 350, 100, 100),
-      new ImageData("images/nochill.png", -500, 450, 100, 100),
+      new ImageData("./arena.png", -500, 150, 100, 100),
+      new ImageData("./avax.png", -500, 250, 100, 100),
+      new ImageData("./coq.png", -500, 350, 100, 100),
+      new ImageData("./nochill.png", -500, 450, 100, 100),
 
-      new ImageData("images/polygon.png", 450, 150, 100, 100),
-      new ImageData("images/arbitrum.png", 450, 250, 100, 100),
-      new ImageData("images/binance.png", 450, 350, 100, 100),
-      new ImageData("images/ethereum.png", 450, 450, 100, 100),
-      new ImageData("images/linea.png", 550, 150, 100, 100),
-      new ImageData("images/avax.png", 550, 250, 100, 100),
+      new ImageData("./polygon.png", 450, 150, 100, 100),
+      new ImageData("./arbitrum.png", 450, 250, 100, 100),
+      new ImageData("./binance.png", 450, 350, 100, 100),
+      new ImageData("./ethereum.png", 450, 450, 100, 100),
+      new ImageData("./linea.png", 550, 150, 100, 100),
+      new ImageData("./avax.png", 550, 250, 100, 100),
       
     ]);
   }
@@ -424,7 +424,6 @@ const allImages = sections.flatMap(section => section.images);
 // Preload the images
 preloadImages(allImages)
   .then(() => {
-      console.log("All images loaded successfully.");
       drawActiveSection();
   })
   .catch(error => {
