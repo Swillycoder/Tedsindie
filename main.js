@@ -382,17 +382,17 @@ class Leaf {
   }
 
   draw(ctx) {
-  if (anim_img.complete && anim_img.naturalHeight !== 0) {
-    ctx.drawImage(
-      anim_img,
-      this.frames * this.width,
-      0,
-      this.width,
-      this.height,
-      this.x,
-      this.y,
-      this.width,
-      this.height
+    if (anim_img.complete && anim_img.naturalHeight !== 0) {
+      ctx.drawImage(
+        anim_img,
+        this.frames * this.width,
+        0,
+        this.width,
+        this.height,
+        this.x,
+        this.y,
+        this.width,
+        this.height
       );
     }
   }
