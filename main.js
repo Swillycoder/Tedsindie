@@ -122,40 +122,43 @@ class MultiLineText {
 
 class Section {
   constructor(title, content, images = []) {
-      this.title = title;
-      this.content = content;
-      this.images = images;
-      this.elements = []
+    this.title = title;
+    this.content = content;
+    this.images = images;
+    this.elements = [];
   }
 
   addElement(element) {
     this.elements.push(element);
   }
+
   async draw(ctx) {
+    ctx.fillStyle = "rgb(10,26,1)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.fillStyle = "rgb(10,26,1)"
-    ctx.fillRect(0,0,canvas.width,canvas.height)
+    forest_img.onload = () => {
+      ctx.drawImage(forest_img, 0, 0, canvas.width, canvas.height);
 
-    ctx.drawImage(forest_img,0,0, canvas.width, canvas.height)
+      ctx.font = "30px Courier";
+      ctx.fillStyle = "white";
+      ctx.textAlign = "center";
+      ctx.fillText(this.title, canvas.width / 2, 80);
 
-    ctx.font = "30px Courier";
-    ctx.fillStyle = "white";
-    ctx.textAlign = "center";
-    ctx.fillText(this.title, canvas.width / 2, 80);
+      ctx.font = "20px Courier";
+      ctx.textAlign = "center";
+      ctx.fillText(this.content, canvas.width / 2, 110);
 
-    ctx.font = "20px Courier";
-    ctx.textAlign = "center";
-    ctx.fillText(this.content, canvas.width/2, 110);
+      for (const image of this.images) {
+        image.draw(ctx);
+      }
 
-    for (const image of this.images) {
-      image.draw(ctx);
-    }
+      for (const element of this.elements) {
+        await element.draw(ctx);
+      }
+    };
 
-    for (const element of this.elements) {
-      await element.draw(ctx);
-    }
+    forest_img.src = 'https://raw.githubusercontent.com/Swillycoder/Tedsindie/forest1.png';
   }
-
 
   handleClick(x, y) {
       for (const position of this.imagePositions) {
