@@ -6,7 +6,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const anim_img = new Image();
-anim_img.src = 'https://raw.githubusercontent.com/Swillycoder/Tedsindie/leaf_anim.png'
+anim_img.src = 'https://raw.githubusercontent.com/Swillycoder/Tedsindie/main/leaf_anim.png'
 anim_img.onload = () => {
   console.log("image loaded")
   drawActiveSection();
