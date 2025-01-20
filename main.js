@@ -136,58 +136,58 @@ class Section {
     ctx.fillStyle = "rgb(10,26,1)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-   // forest_img.onload = () => {
-      //ctx.drawImage(forest_img, 0, 0, canvas.width, canvas.height);
+    // forest_img.onload = () => {
+    //   ctx.drawImage(forest_img, 0, 0, canvas.width, canvas.height);
 
-      ctx.font = "30px Courier";
-      ctx.fillStyle = "white";
-      ctx.textAlign = "center";
-      ctx.fillText(this.title, canvas.width / 2, 80);
+    ctx.font = "30px Courier";
+    ctx.fillStyle = "white";
+    ctx.textAlign = "center";
+    ctx.fillText(this.title, canvas.width / 2, 80);
 
-      ctx.font = "20px Courier";
-      ctx.textAlign = "center";
-      ctx.fillText(this.content, canvas.width / 2, 110);
+    ctx.font = "20px Courier";
+    ctx.textAlign = "center";
+    ctx.fillText(this.content, canvas.width / 2, 110);
 
-      for (const image of this.images) {
-        image.draw(ctx);
-      }
+    for (const image of this.images) {
+      image.draw(ctx);
+    }
 
-      for (const element of this.elements) {
-        await element.draw(ctx);
-      }
-    };
+    for (const element of this.elements) {
+      await element.draw(ctx);
+    }
+    // };
 
-    //forest_img.src = 'https://raw.githubusercontent.com/Swillycoder/Tedsindie/forest1.png';
+    // forest_img.src = 'https://raw.githubusercontent.com/Swillycoder/Tedsindie/forest1.png';
   }
 
   handleClick(x, y) {
-      for (const position of this.imagePositions) {
-          if (
-              x >= position.x &&
-              x <= position.x + position.width &&
-              y >= position.y &&
-              y <= position.y + position.height &&
-              position.link
-          ) {
-              window.open(position.link, "_blank");
-              return;
-          }
+    for (const position of this.imagePositions) {
+      if (
+        x >= position.x &&
+        x <= position.x + position.width &&
+        y >= position.y &&
+        y <= position.y + position.height &&
+        position.link
+      ) {
+        window.open(position.link, "_blank");
+        return;
       }
+    }
   }
 
   static drawBanner(ctx, canvas, sections, activeIndex) {
-      ctx.fillStyle = "#333";
-      ctx.fillRect(0, 0, canvas.width, 50);
-  
-      // Banner titles
-      ctx.font = "20px Courier";
-      const spacing = canvas.width / sections.length;
+    ctx.fillStyle = "#333";
+    ctx.fillRect(0, 0, canvas.width, 50);
 
-      sections.forEach((section, index) => {
-          ctx.fillStyle = index === activeIndex ? "white" : "#aaa";
-          ctx.textAlign = "center";
-          ctx.fillText(section.title, spacing * index + spacing / 2, 30);
-      });
+    // Banner titles
+    ctx.font = "20px Courier";
+    const spacing = canvas.width / sections.length;
+
+    sections.forEach((section, index) => {
+      ctx.fillStyle = index === activeIndex ? "white" : "#aaa";
+      ctx.textAlign = "center";
+      ctx.fillText(section.title, spacing * index + spacing / 2, 30);
+    });
   }
 }
 
