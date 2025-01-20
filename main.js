@@ -7,8 +7,8 @@ canvas.height = window.innerHeight;
 
 const anim_img = new Image();
 anim_img.src = 'https://raw.githubusercontent.com/Swillycoder/Tedsindie/leaf_anim.png'
-const forest_img = new Image();
-forest_img.src = 'https://raw.githubusercontent.com/Swillycoder/Tedsindie/forest1.png'
+//const forest_img = new Image();
+//forest_img.src = 'https://raw.githubusercontent.com/Swillycoder/Tedsindie/forest1.png'
 
 class ImageData {
   constructor(src, xOffset, y, width, height, link = null) {
@@ -136,8 +136,8 @@ class Section {
     ctx.fillStyle = "rgb(10,26,1)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    forest_img.onload = () => {
-      ctx.drawImage(forest_img, 0, 0, canvas.width, canvas.height);
+   // forest_img.onload = () => {
+      //ctx.drawImage(forest_img, 0, 0, canvas.width, canvas.height);
 
       ctx.font = "30px Courier";
       ctx.fillStyle = "white";
@@ -157,7 +157,7 @@ class Section {
       }
     };
 
-    forest_img.src = 'https://raw.githubusercontent.com/Swillycoder/Tedsindie/forest1.png';
+    //forest_img.src = 'https://raw.githubusercontent.com/Swillycoder/Tedsindie/forest1.png';
   }
 
   handleClick(x, y) {
