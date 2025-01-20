@@ -8,9 +8,7 @@ canvas.height = window.innerHeight;
 const anim_img = new Image();
 anim_img.src = 'https://raw.githubusercontent.com/Swillycoder/Tedsindie/main/leaf_anim.png'
 anim_img.onload = () => {
-  console.log("image loaded")
-  drawActiveSection();
-  
+  console.log("image loaded");
 }
 //const forest_img = new Image();
 //forest_img.src = 'https://raw.githubusercontent.com/Swillycoder/Tedsindie/forest1.png'
