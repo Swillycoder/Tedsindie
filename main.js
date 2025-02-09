@@ -2,8 +2,8 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 
-canvas.width = window.1000;
-canvas.height = window.560;
+canvas.width = 1000;
+canvas.height = 560;
 
 const anim_img = new Image();
 anim_img.src = 'https://raw.githubusercontent.com/Swillycoder/Tedsindie/main/leaf_anim.png'
