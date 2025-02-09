@@ -2,8 +2,8 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = window.1000;
+canvas.height = window.560;
 
 const anim_img = new Image();
 anim_img.src = 'https://raw.githubusercontent.com/Swillycoder/Tedsindie/main/leaf_anim.png'
@@ -231,6 +231,9 @@ class Games extends Section {
       new ImageData("./game1.png", -300, 150, 200, 150, "https://swillycoder.github.io/Jungle-Runner/"),
       new ImageData("./game2.png", 0, 150, 200, 150, "https://swillycoder.github.io/Rottentomatos/"),
       new ImageData("./game3.png", 300, 150, 200, 150, "https://swillycoder.github.io/SeahorseWorld/"),
+      new ImageData("images/game4.png", -300, 360, 200, 150, "https://swillycoder.github.io/Taxidriver/"),
+      new ImageData("images/game5.png", 0, 360, 200, 150, "https://swillycoder.github.io/Namageddon/"),
+      new ImageData("images/game6.png", 300, 360, 200, 150, "https://swillycoder.github.io/ticktickboom/"),
     ]);
   }
 
@@ -240,6 +243,9 @@ class Games extends Section {
     ctx.fillText("JUNGLE RUNNER!", canvas.width/2 - 300, 330);
     ctx.fillText("ROTTEN TOMATOES", canvas.width/2, 330);
     ctx.fillText("SEAHORSE WORLD!", canvas.width/2 + 300, 330);
+    ctx.fillText("NEW YORK TAXI!", canvas.width/2 - 300, 540);
+    ctx.fillText("NAMAGEDDON", canvas.width/2, 540);
+    ctx.fillText("TICK TICK BOOM!", canvas.width/2 + 300, 540);
     ctx.fillText("Click on an image to PLAY!", canvas.width/2, 600);
   }
 }
