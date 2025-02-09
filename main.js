@@ -231,9 +231,9 @@ class Games extends Section {
       new ImageData("./game1.png", -300, 150, 200, 150, "https://swillycoder.github.io/Jungle-Runner/"),
       new ImageData("./game2.png", 0, 150, 200, 150, "https://swillycoder.github.io/Rottentomatos/"),
       new ImageData("./game3.png", 300, 150, 200, 150, "https://swillycoder.github.io/SeahorseWorld/"),
-      new ImageData("images/game4.png", -300, 360, 200, 150, "https://swillycoder.github.io/Taxidriver/"),
-      new ImageData("images/game5.png", 0, 360, 200, 150, "https://swillycoder.github.io/Namageddon/"),
-      new ImageData("images/game6.png", 300, 360, 200, 150, "https://swillycoder.github.io/ticktickboom/"),
+      new ImageData("./game4.png", -300, 360, 200, 150, "https://swillycoder.github.io/Taxidriver/"),
+      new ImageData("./game5.png", 0, 360, 200, 150, "https://swillycoder.github.io/Namageddon/"),
+      new ImageData("./game6.png", 300, 360, 200, 150, "https://swillycoder.github.io/ticktickboom/"),
     ]);
   }
 
