@@ -219,7 +219,6 @@ class Home extends Section {
     ctx.textAlign = "center"
     ctx.fillText("Enjoy exploring my website!", canvas.width/2, 590);
     ctx.fillText("Use Mouse wheel to navigate", canvas.width/2, 620);
-    ctx.fillText("Zoom - 90%", canvas.width/2 + 450, 180);
   }
 }
 
@@ -295,10 +294,10 @@ class Donate extends Section {
       new ImageData("./links1.png", -200, 150, 200, 200),
       new ImageData("./metamask.png", 200, 150, 200, 200),
 
-      new ImageData("./arena.png", -400, 150, 100, 100),
-      new ImageData("./avax.png", -400, 250, 100, 100),
-      new ImageData("./coq.png", -400, 350, 100, 100),
-      new ImageData("./nochill.png", -400, 450, 100, 100),
+      new ImageData("./arena.png", -450, 150, 100, 100),
+      new ImageData("./avax.png", -450, 250, 100, 100),
+      new ImageData("./coq.png", -450, 350, 100, 100),
+      new ImageData("./nochill.png", -450, 450, 100, 100),
 
       new ImageData("./polygon.png", 450, 150, 100, 100),
       new ImageData("./arbitrum.png", 450, 250, 100, 100),
@@ -313,9 +312,9 @@ class Donate extends Section {
   draw(ctx, canvas) {
     super.draw(ctx, canvas);
     ctx.fillStyle = "white";
-    ctx.fillText("Thank you for your support!", canvas.width/2, 620);
+    ctx.fillText("Thank you for your support!", canvas.width/2, 550);
     ctx.fillText("Accepted Tokens in $ARENA", canvas.width/2 -270, 120);
-    ctx.fillText("Supported Networks in Metamask", canvas.width/2 + 250, 120);
+    ctx.fillText("Supported Networks in Metamask", canvas.width/2 + 300, 120);
     ctx.fillStyle = "white";
     ctx.fillText("ARENA App", canvas.width/2 - 200, 380);
     ctx.fillStyle = "white";
