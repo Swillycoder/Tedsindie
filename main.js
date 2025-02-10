@@ -197,12 +197,12 @@ class Section {
 class Home extends Section {
   constructor() {
     super("Home", "Welcome to Teds Indie Games", [
-      new ImageData("./home1.png", 0, 140, 550, 400),
+      new ImageData("./home1.png", 0, 140, 450, 300),
     ]);
     const homeText = new MultiLineText({
       fileName: "./text1.txt",
-      x: 50,
-      y: 140,
+      x: 10,
+      y: 80,
       paragraphWidth:270,
       font: "14px Courier",
       lineHeight: 30,
@@ -219,7 +219,6 @@ class Home extends Section {
     ctx.textAlign = "center"
     ctx.fillText("Enjoy exploring my website!", canvas.width/2, 590);
     ctx.fillText("Use Mouse wheel to navigate", canvas.width/2, 620);
-    ctx.fillText("Resolution - 1920 x 1080", canvas.width/2 + 450, 150);
     ctx.fillText("Zoom - 90%", canvas.width/2 + 450, 180);
   }
 }
@@ -253,11 +252,11 @@ class Games extends Section {
 class Bio extends Section {
   constructor() {
     super("Bio", "Learn more about me!", [
-      new ImageData("./bio1.png", 0, 120, 400, 400),
+      new ImageData("./bio1.png", 0, 120, 380, 380),
     ]);
     const bioText = new MultiLineText({
       fileName: "./bio.txt",
-      x: 80,
+      x: 20,
       y: 150,
       paragraphWidth:300,
       font: "16px Courier",
@@ -296,10 +295,10 @@ class Donate extends Section {
       new ImageData("./links1.png", -200, 150, 200, 200),
       new ImageData("./metamask.png", 200, 150, 200, 200),
 
-      new ImageData("./arena.png", -500, 150, 100, 100),
-      new ImageData("./avax.png", -500, 250, 100, 100),
-      new ImageData("./coq.png", -500, 350, 100, 100),
-      new ImageData("./nochill.png", -500, 450, 100, 100),
+      new ImageData("./arena.png", -400, 150, 100, 100),
+      new ImageData("./avax.png", -400, 250, 100, 100),
+      new ImageData("./coq.png", -400, 350, 100, 100),
+      new ImageData("./nochill.png", -400, 450, 100, 100),
 
       new ImageData("./polygon.png", 450, 150, 100, 100),
       new ImageData("./arbitrum.png", 450, 250, 100, 100),
@@ -315,8 +314,8 @@ class Donate extends Section {
     super.draw(ctx, canvas);
     ctx.fillStyle = "white";
     ctx.fillText("Thank you for your support!", canvas.width/2, 620);
-    ctx.fillText("Accepted Tokens in $ARENA", canvas.width/2 -470, 120);
-    ctx.fillText("Supported Networks in Metamask", canvas.width/2 + 400, 120);
+    ctx.fillText("Accepted Tokens in $ARENA", canvas.width/2 -270, 120);
+    ctx.fillText("Supported Networks in Metamask", canvas.width/2 + 250, 120);
     ctx.fillStyle = "white";
     ctx.fillText("ARENA App", canvas.width/2 - 200, 380);
     ctx.fillStyle = "white";
