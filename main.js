@@ -227,11 +227,11 @@ class Games extends Section {
   constructor() {
     super("Games", "Explore my games!", [
       new ImageData("./game1.png", -400, 150, 200, 150, "https://swillycoder.github.io/Jungle-Runner/"),
-      new ImageData("./game2.png", -100, 150, 200, 150, "https://swillycoder.github.io/Rottentomatos/"),
+      new ImageData("./game2.png", -150, 150, 200, 150, "https://swillycoder.github.io/Rottentomatos/"),
       new ImageData("./game3.png", 100, 150, 200, 150, "https://swillycoder.github.io/SeahorseWorld/"),
       new ImageData("./game4.png", 400, 360, 200, 150, "https://swillycoder.github.io/Taxidriver/"),
       new ImageData("./game5.png", -400, 360, 200, 150, "https://swillycoder.github.io/Namageddon/"),
-      new ImageData("./game6.png", -100, 360, 200, 150, "https://swillycoder.github.io/ticktickboom/"),
+      new ImageData("./game6.png", -150, 360, 200, 150, "https://swillycoder.github.io/ticktickboom/"),
       new ImageData("./game7.png", 100, 360, 200, 150, "https://swillycoder.github.io/fruity/"),
       new ImageData("./game8.png", 400, 360, 200, 150, "https://swillycoder.github.io/floattedaway/"),
     ]);
@@ -240,12 +240,14 @@ class Games extends Section {
   draw(ctx, canvas) {
     super.draw(ctx, canvas);
     ctx.fillStyle = "white";
-    ctx.fillText("JUNGLE RUNNER!", canvas.width/2 - 300, 330);
-    ctx.fillText("ROTTEN TOMATOES", canvas.width/2, 330);
-    ctx.fillText("SEAHORSE WORLD!", canvas.width/2 + 300, 330);
-    ctx.fillText("NEW YORK TAXI!", canvas.width/2 - 300, 540);
-    ctx.fillText("NAMAGEDDON", canvas.width/2, 540);
-    ctx.fillText("TICK TICK BOOM!", canvas.width/2 + 300, 540);
+    ctx.fillText("JUNGLE RUNNER!", canvas.width/2 - 400, 330);
+    ctx.fillText("ROTTEN TOMATOES!", canvas.width/2 -150, 330);
+    ctx.fillText("SEAHORSE WORLD!", canvas.width/2 + 150, 330);
+    ctx.fillText("NEW YORK TAXI!", canvas.width/2 + 400, 330);
+    ctx.fillText("NAMAGEDDON!", canvas.width/2 - 400, 540);
+    ctx.fillText("TICK TICK BOOM!", canvas.width/2 - 150, 540);
+    ctx.fillText("FRUITY!", canvas.width/2 + 150, 540);
+    ctx.fillText("FLOAT TED AWAY!", canvas.width/2 + 400, 540);
     ctx.fillText("Click on an image to PLAY!", canvas.width/2, 600);
   }
 }
