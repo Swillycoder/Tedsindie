@@ -379,13 +379,14 @@ class Leaf {
   }
 
   draw(ctx) {
-  drawImage(anim_img, this.x, this.y);
+    ctx.drawImage(anim_img, this.x, this.y);
   }
 
   update () {
-  this.y += 0.1;
+    this.y += 0.1;
   }
 }
+
 
 /*
   update() {
@@ -422,7 +423,7 @@ class Leaf {
   }
 }
 */
-async function renderSections(ctx, canvas) {
+async function renderSections(ctx, canvas, sections) {
   for (const section of sections) {
     section.draw(ctx, canvas); // Draw each section
   }
