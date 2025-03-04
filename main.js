@@ -374,8 +374,8 @@ class Leaf {
     this.frameDelay = 100; 
     this.frameTimer = 0;
     this.frames = 0;
-    this.width = 50;
-    this.height = 34;
+    this.width = 150;
+    this.height = 150;
   }
 
   update() {
