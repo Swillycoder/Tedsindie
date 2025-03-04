@@ -136,7 +136,7 @@ class Section {
   }
 
   async draw(ctx) {
-    ctx.fillStyle = "yellow";
+    ctx.fillStyle = "rgb(10,26,1)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     // forest_img.onload = () => {
@@ -378,6 +378,14 @@ class Leaf {
     this.height = 150;
   }
 
+  draw(ctx) {
+  drawImage(anim_img, this.x, this.y);
+  }
+
+  update () {
+  this.y += 0.1;
+  }
+/*
   update() {
     this.y += 0.1;
 
@@ -411,7 +419,7 @@ class Leaf {
     }
   }
 }
-
+*/
 async function renderSections(ctx, canvas) {
   for (const section of sections) {
     section.draw(ctx, canvas); // Draw each section
@@ -471,7 +479,7 @@ function drawActiveSection() {
     sections[activeSectionIndex].draw(ctx, canvas);
 
     leaves.forEach(leaf => {
-      //leaf.update();
+      leaf.update();
       leaf.draw(ctx);
     });
 
