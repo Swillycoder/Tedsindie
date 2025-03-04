@@ -6,7 +6,7 @@ canvas.width = 1000;
 canvas.height = 560;
 
 const anim_img = new Image();
-anim_img.src = 'https://raw.githubusercontent.com/Swillycoder/Tedsindie/main/leaf_anim.png'
+anim_img.src = 'https://raw.githubusercontent.com/Swillycoder/Tedsindie/main/flower.png'
 anim_img.onload = () => {
   console.log("image loaded");
 }
