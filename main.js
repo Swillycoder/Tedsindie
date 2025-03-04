@@ -229,7 +229,7 @@ class Games extends Section {
       new ImageData("./game1.png", -400, 150, 200, 150, "https://swillycoder.github.io/Jungle-Runner/"),
       new ImageData("./game2.png", -150, 150, 200, 150, "https://swillycoder.github.io/Rottentomatos/"),
       new ImageData("./game3.png", 100, 150, 200, 150, "https://swillycoder.github.io/SeahorseWorld/"),
-      new ImageData("./game4.png", 400, 360, 200, 150, "https://swillycoder.github.io/Taxidriver/"),
+      new ImageData("./game4.png", 400, 150, 200, 150, "https://swillycoder.github.io/Taxidriver/"),
       new ImageData("./game5.png", -400, 360, 200, 150, "https://swillycoder.github.io/Namageddon/"),
       new ImageData("./game6.png", -150, 360, 200, 150, "https://swillycoder.github.io/ticktickboom/"),
       new ImageData("./game7.png", 100, 360, 200, 150, "https://swillycoder.github.io/fruity/"),
@@ -471,7 +471,7 @@ function drawActiveSection() {
     sections[activeSectionIndex].draw(ctx, canvas);
 
     leaves.forEach(leaf => {
-      leaf.update();
+      //leaf.update();
       leaf.draw(ctx);
     });
 
