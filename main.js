@@ -385,6 +385,8 @@ class Leaf {
   update () {
   this.y += 0.1;
   }
+}
+
 /*
   update() {
     this.y += 0.1;
