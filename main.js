@@ -6,7 +6,7 @@ canvas.width = 1000;
 canvas.height = 560;
 
 const anim_img = new Image();
-anim_img.src = 'https://raw.githubusercontent.com/Swillycoder/Tedsindie/main/flower.png'
+anim_img.src = 'https://raw.githubusercontent.com/Swillycoder/Tedsindie/main/flower.png';
 anim_img.onload = () => {
   console.log("image loaded");
 }
@@ -211,8 +211,8 @@ class Home extends Section {
     }
   
 
-  draw(ctx, canvas) {
-    super.draw(ctx, canvas);
+  draw(ctx) {
+    super.draw(ctx);
 
     ctx.font = "20px Courier";
     ctx.fillStyle = "white";
@@ -371,9 +371,9 @@ class Leaf {
   constructor(x, y) {
     this.x = x;
     this.y = y;
-    this.frameDelay = 100; 
-    this.frameTimer = 0;
-    this.frames = 0;
+    //this.frameDelay = 100; 
+    //this.frameTimer = 0;
+    //this.frames = 0;
     this.width = 150;
     this.height = 150;
   }
