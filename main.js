@@ -136,7 +136,7 @@ class Section {
   }
 
   async draw(ctx) {
-    ctx.fillStyle = "rgb(10,26,1)";
+    ctx.fillStyle = "yellow";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     // forest_img.onload = () => {
