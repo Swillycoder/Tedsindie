@@ -242,11 +242,11 @@ class Games extends Section {
     ctx.fillStyle = "white";
     ctx.fillText("JUNGLE RUNNER!", canvas.width/2 - 400, 330);
     ctx.fillText("ROTTEN TOMATOES!", canvas.width/2 -150, 330);
-    ctx.fillText("SEAHORSE WORLD!", canvas.width/2 + 150, 330);
+    ctx.fillText("SEAHORSE WORLD!", canvas.width/2 + 100, 330);
     ctx.fillText("NEW YORK TAXI!", canvas.width/2 + 400, 330);
     ctx.fillText("NAMAGEDDON!", canvas.width/2 - 400, 540);
     ctx.fillText("TICK TICK BOOM!", canvas.width/2 - 150, 540);
-    ctx.fillText("FRUITY!", canvas.width/2 + 150, 540);
+    ctx.fillText("FRUITY!", canvas.width/2 + 100, 540);
     ctx.fillText("FLOAT TED AWAY!", canvas.width/2 + 400, 540);
     ctx.fillText("Click on an image to PLAY!", canvas.width/2, 600);
   }
@@ -494,7 +494,7 @@ function drawActiveSection() {
 
 drawActiveSection();
 initializeLeaves();
-renderSections(ctx, canvas);
+renderSections(ctx, canvas, sections);
 
 window.onload = () => {
   drawActiveSection();
