@@ -6,7 +6,7 @@ canvas.width = 1000;
 canvas.height = 560;
 
 const anim_img = new Image();
-anim_img.src = 'https://raw.githubusercontent.com/Swillycoder/Tedsindie/main/flower.png';
+anim_img.src = 'https://raw.githubusercontent.com/Swillycoder/Tedsindie/main/flowersml.png';
 anim_img.onload = () => {
   console.log("image loaded");
 }
@@ -384,6 +384,9 @@ class Leaf {
 
   update () {
     this.y += 0.1;
+    if (this.y > canvas.height) {
+      this.y = -this.height;
+    }
   }
 }
 
@@ -470,8 +473,8 @@ const leaves = []
 
 function initializeLeaves() {
   for (let i = 0; i < 10; i++) {
-    const leafX = Math.random() * window.innerWidth;
-    const leafY = Math.random() * window.innerHeight;
+    const leafX = Math.random() * canvas.width;
+    const leafY = Math.random() * canvas.height -  canvas.height;
     leaves.push(new Leaf(leafX, leafY));
   }
 }
